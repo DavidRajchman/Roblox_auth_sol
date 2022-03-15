@@ -5,7 +5,7 @@ print("napis 2. kladne cislo")
 b = io.read("*number")
 print("napis 3. kladne cislo")
 c = io.read("*number")
-
+start_time = os.time() --fuknce ktera meri cas vypoctu - zapneme stopky
 --napred overim ze vsechny cisla jsou kladna
 if a>=0 and b>= 0 and c>=0 then
 
@@ -39,10 +39,12 @@ if a>=0 and b>= 0 and c>=0 then
   end
 --protoze se m jeste naposledy zvetsilo i po splneni podminek tak m zmensim o jedna a ziskam vysledek
   m = m-1
-  
+  end_time = os.time(); --ukoncime stopky
   print("nalezeny nejmensi spolecny nasobek je:", m)
-  print("m % a",m%a,"m % b",m%b,"m % c",m%c)
+  print("m % a",m%a,"m % b",m%b,"m % c",m%c) --overeni ze se opravdu jedna o spolecny nasobek
 
+  elapsed_time = os.difftime(end_time,start_time) --spocitame rozdil casu
+  print(elapsed_time) --vypiseme cas straveny vypoctem
 else 
   print("cisla nejsou kladna")
 
