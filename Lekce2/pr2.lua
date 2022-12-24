@@ -5,6 +5,7 @@
   b = io.read("*number")
   c = io.read("*number")
 
+--tak ne, jenom jsem se zmatl, kod je v poradku
   if a>b then 
     if a>c then
       print("prvni je nejvetsi")

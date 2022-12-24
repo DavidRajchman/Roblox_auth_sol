@@ -7,7 +7,7 @@ print("nacetl jsem",castka,"kc")
 --nyni provedu vypocet jednotlivych castek, postupuji od nejvetsi po nejmensi
 if castka>=5000 then
     --pokud je castka vetsi nez 5000 dam alespon jednu 5000      bankovku
-    pocet = castka/5000 --vydelim moji castku 5000 abych zjistil kolik jich mohu vydat
+    pocet =castka/5000 --vydelim moji castku 5000 abych zjistil kolik jich mohu vydat
     pocet = math.floor(pocet) --zaokrouhlim dolu pomoci funkce floor
     print("vydam ti", pocet, "bankovek o hodnote 5000kc") --vypisu kolik vydam bankovek
     castka = castka - pocet*5000 --nyni zmensim moji castku co je jeste potreba vydat o vydane bankovky

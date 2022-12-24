@@ -1,8 +1,22 @@
-a = io.read("*number")
-i = 1 --pocet cifer, zacina na jednicce protoze kazde cislo ma alsespon jednu cislici
-while (a > 1) do
-  a = a/10
-  i = i + 1
+--prumerna znamka
+
+--nacita znamky (1 - 5 jako ve skole), nacitani se ukonci cislem mensim nebo rovno nule
+
+--po skonceni nacitani vypise prumernou znamku
+
+pocetZnamek = 0
+soucetZnamek = 0
+
+print("Vloz prvni znamku")
+aktualniZnamka = io.read("*number")
+
+while aktualniZnamka > 0 do
+  soucetZnamek = soucetZnamek + aktualniZnamka
+  pocetZnamek = pocetZnamek + 1
+  print("secteno, napis dalsi znamku nebo ukonci cislem 0")
+  aktualniZnamka = io.read("*number")
 end
 
-print("zadane cislo ma:",i,"cislic")
+print("konec nacitani tvoje prumerna znamka je:")
+print(soucetZnamek/pocetZnamek)
+
